@@ -1,61 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Campus Connect - Events</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <nav>
-            <h1>Campus Connect</h1>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
     <section id="events-hero">
-        <h1>Find & Join Exciting Events</h1>
-        <input type="text" id="search-bar" placeholder="🔍 Search events...">
+      <h1>Find & Join Exciting Events</h1>
+      <input type="text" id="search-bar" placeholder="🔍 Search events..." />
     </section>
 
     <section id="events-container">
-        <div class="event-card" onclick="openPopup('hackathon')">
-            <img src="images/hackathon.jpg" alt="Hackathon">
-            <h2>🚀 Hackathon 2025</h2>
-            <p>Innovate, compete, and win big prizes!</p>
-        </div>
+      <div class="event-card" onclick="openPopup('hackathon')">
+        <img src="images/hackathon.jpg" alt="Hackathon" />
+        <h2>🚀 Hackathon 2025</h2>
+        <p>Innovate, compete, and win big prizes!</p>
+      </div>
 
-        <div class="event-card" onclick="openPopup('ai-workshop')">
-            <img src="images/workshop.jpg" alt="AI Workshop">
-            <h2>🤖 AI & Machine Learning Workshop</h2>
-            <p>Learn AI from industry experts!</p>
-        </div>
+      <div class="event-card" onclick="openPopup('ai-workshop')">
+        <img src="images/workshop.jpg" alt="AI Workshop" />
+        <h2>🤖 AI & Machine Learning Workshop</h2>
+        <p>Learn AI from industry experts!</p>
+      </div>
 
-        <div class="event-card" onclick="openPopup('startup-fair')">
-            <img src="images/startup.jpg" alt="Startup Fair">
-            <h2>💡 Startup Connect</h2>
-            <p>Network with investors and pitch ideas.</p>
-        </div>
+      <div class="event-card" onclick="openPopup('startup-fair')">
+        <img src="images/startup.jpg" alt="Startup Fair" />
+        <h2>💡 Startup Connect</h2>
+        <p>Network with investors and pitch ideas.</p>
+      </div>
     </section>
 
     <!-- Event Popup -->
     <div id="event-popup" class="popup">
-        <div class="popup-content">
-            <span class="close-btn" onclick="closePopup()">&times;</span>
-            <h2 id="popup-title"></h2>
-            <p id="popup-description"></p>
-            <p><strong>Date:</strong> <span id="popup-date"></span></p>
-            <p><strong>Location:</strong> <span id="popup-location"></span></p>
-            <button class="register-btn">Register Now</button>
-        </div>
+      <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h2 id="popup-title"></h2>
+        <p id="popup-description"></p>
+        <p><strong>Date:</strong> <span id="popup-date"></span></p>
+        <p><strong>Location:</strong> <span id="popup-location"></span></p>
+        <button class="register-btn">Register Now</button>
+      </div>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
