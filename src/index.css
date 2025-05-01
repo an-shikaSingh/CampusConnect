@@ -1,0 +1,126 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 20% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 17% 14%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 17% 14%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 260 100% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 195 80% 70%;
+    --secondary-foreground: 240 17% 14%;
+
+    --muted: 240 15% 20%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 262 83% 68%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 15% 20%;
+    --input: 240 15% 20%;
+    --ring: 240 4.9% 83.9%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='15' cy='15' r='1' fill='%236D28D9' fill-opacity='0.3'/%3E%3C/svg%3E");
+    background-size: 100px 100px;
+  }
+}
+
+.event-card {
+  @apply bg-card/70 backdrop-blur-sm transition-all duration-300 hover:bg-card hover:shadow-lg;
+}
+
+.logo-gradient {
+  @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+}
+
+.space-card {
+  @apply bg-card/80 backdrop-blur-sm border border-purple-800/30 shadow-lg rounded-xl text-white;
+}
+
+.btn-gradient {
+  @apply bg-gradient-to-r from-primary to-accent text-white font-medium;
+}
+
+.bg-stars {
+  position: relative;
+}
+
+.bg-stars::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='400' height='400' viewBox='0 0 400 400' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='70' cy='50' r='1' fill='white'/%3E%3Ccircle cx='150' cy='120' r='1' fill='%236D28D9'/%3E%3Ccircle cx='310' cy='190' r='1' fill='%2338BDF8'/%3E%3Ccircle cx='370' cy='260' r='1.5' fill='white'/%3E%3Ccircle cx='230' cy='380' r='1' fill='%236D28D9'/%3E%3Ccircle cx='120' cy='350' r='1' fill='%2338BDF8'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  background-color: rgba(147, 51, 234, 0.5);
+  border-radius: 50%;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.particle-purple {
+  background-color: rgba(147, 51, 234, 0.3);
+  width: 6px;
+  height: 6px;
+}
+
+.particle-blue {
+  background-color: rgba(56, 189, 248, 0.3);
+  width: 4px;
+  height: 4px;
+}
+
+.particle-white {
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 3px;
+  height: 3px;
+}
+
+.animate-float-1 {
+  animation: particle-float 15s infinite ease-in-out;
+}
+
+.animate-float-2 {
+  animation: particle-float 20s infinite ease-in-out;
+  animation-delay: -5s;
+}
+
+.animate-float-3 {
+  animation: particle-float 25s infinite ease-in-out;
+  animation-delay: -12s;
+}
+
+.animate-fade {
+  @apply animate-fade-in;
+}
