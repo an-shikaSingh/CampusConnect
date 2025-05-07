@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: campus-connect-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: campus-connect-label
+  template:
+    metadata:
+      labels:
+        app: campus-connect-label
+    spec:
+      containers:
+      - name: campus-connect-container
+        image: react-app
+        ports:
+        - containerPort: 80
